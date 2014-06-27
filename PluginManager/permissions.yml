@@ -1,0 +1,37 @@
+permissions:
+    pluginmanager.*:
+        description: Gives access to all pluginmanager commands
+        children:
+            pluginmanager.pmdb.*: true
+            pluginmanager.list: true
+            pluginmanager.choose: true
+    pluginmanager.basic:
+        description: Gives access to basic pluginmanager commands
+        children:
+            pluginmanager.pmdb: false
+            pluginmanager.list: true
+            pluginmanager.choose: false
+    pluginmanager.pmdb.*:
+        description: All permissions for the pmbd!
+        children:
+            pluginmanager.pmdb.install: true
+            pluginmanager.pmdb.update: true
+        default: false
+    pluginmanager.pmdb.mod:
+        description: Mod permissions for the pmbd!
+        children:
+            pluginmanager.pmdb.install: false
+            pluginmanager.pmdb.update: true
+        default: false
+    pluginmanager.pmdb.install:
+        description: Allows you to install a plugin through pmbd!
+        default: false
+    pluginmanager.pmdb.update:
+        description: Allows you to update a plugin through pmbd!
+        default: false
+    pluginmanager.list:
+        description: Allows you to list the plugin jars!
+        default: true
+    pluginmanager.choose:
+        description: Allows you to (not) confirm the choice!
+        default: false

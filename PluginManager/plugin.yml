@@ -1,0 +1,31 @@
+name: PluginManager
+author: Nicba1010
+version: 2.0.0
+description:
+main: me.nicba1010.pluginmanager.Main
+commands:
+  pmlist:
+     description: Better than /plugins.
+     usage: /pmlist
+     permission: pluginmanager.list
+     permission-message: You don't have the permission to list the plugins <permission> 
+  test:
+     description: Better than /plugins.
+     usage: /test
+     permission: pluginmanager.list
+     permission-message: You don't have the permission to list the plugins <permission>
+  pmdb:
+     description: Plugin manager database, the most powerful command of them all. If you wonder what is the PluginID in usage of the command, for example it is gui-shop in http://dev.bukkit.org/bukkit-plugins/gui-shop/. You can install or update plugins in a few seconds. You don't even have to do anything but type those few letters!
+     usage: /pmdb [install/update/both/search] [PluginID/page]
+     permission: pluginmanager.pmdb
+     permission-message: You don't have the permission to access the pmdb <permission>
+  pm:
+     description: Used to (not)confirm your choice is other commands.
+     usage: /pm [answer/install] [page]
+     permission: pluginmanager.yesno
+     permission-message: You don't have the permission to (not) confirm the choice <permission>
+  pminfo:
+     description: Better than /plugins & can specificate plugin.
+     usage: /pminfo [plugin]
+     permission: pluginmanager.list
+     permission-message: You don't have the permission to list the plugin <permission>
